@@ -30,7 +30,6 @@ FinTelligence is an adaptive investment toolkit designed to fetch historical and
    conda env create -f environment.yaml
    ```
 
-
 ## Usage
 
 1. Activate the Conda environment:
@@ -62,6 +61,29 @@ FinTelligence is an adaptive investment toolkit designed to fetch historical and
    ```python
    financial_data = data_fetcher.fetch_financial_data(ticker)
    ```
+
+## Example
+
+```python
+from data_fetcher import StockDataFetcher
+
+data_fetcher = StockDataFetcher()
+
+tickers = ["AAPL", "GOOGL", "MSFT"]
+start_date = "2023-01-01"
+end_date = "2023-12-31"
+
+for ticker in tickers:
+    # Fetch historical data
+    print(f"Fetching historical data for {ticker}...")
+    historical_data = data_fetcher.fetch_historical_data(ticker, start_date, end_date)
+    print(f"Historical data for {ticker}:\n{historical_data[:5]}...\n")
+
+    # Fetch financial data
+    print(f"Fetching financial data for {ticker}...")
+    financial_data = data_fetcher.fetch_financial_data(ticker)
+    print(f"Financial data for {ticker}:\n{financial_data}\n")
+```
 
 ## Contributing
 
