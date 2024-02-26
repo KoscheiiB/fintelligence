@@ -14,14 +14,14 @@ FinTelligence is an adaptive investment toolkit designed to fetch historical and
 1. Clone the repository:
 
    ```bash
-   git clone git clone https://github.com/KoscheiiB/fintelligence.git
+   git clone https://github.com/KoscheiiB/fintelligence.git
 
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd FinTelligence
+   cd fintelligence
    ```
 
 3. Install the required dependencies specified in the YAML file:
