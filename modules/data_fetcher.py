@@ -11,7 +11,7 @@ import pandas as pd
 
 class CachedLimiterSession(CacheMixin, LimiterMixin, Session): 
     pass
- 
+
 session = CachedLimiterSession(
     limiter=Limiter(RequestRate(2, Duration.SECOND*3)),  # max 2 requests per 3 seconds
     bucket_class=MemoryQueueBucket,
@@ -23,7 +23,7 @@ session.headers.update({'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10
 class StockDataFetcher:        
     def __init__(self):
         logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-        self.cache_dir = "../cache/" 
+        self.cache_dir = "./cache/" 
         if not os.path.exists(self.cache_dir):
             os.makedirs(self.cache_dir) 
         self.session = session   
