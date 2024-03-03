@@ -44,11 +44,11 @@ For a detailed list of changes, improvements, and additions across different ver
 5. Available functions:
 
 ```python
-from data_fetcher import StockDataFetcher
+from modules.data_fetcher import StockDataFetcher
 
 data_fetcher = StockDataFetcher()
 
-tickers = "AAPL"
+ticker = "AAPL"
 start_date = "2023-01-01"
 end_date = "2023-12-31"
 
